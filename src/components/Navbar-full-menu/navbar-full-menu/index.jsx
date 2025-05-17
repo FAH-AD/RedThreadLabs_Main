@@ -70,8 +70,8 @@ const NavbarFullMenu = ({ theme, lr }) => {
                   </li>
                   <li>
                   <div className="o-hidden">
-                      <Link href="/works">
-                        <a className="link" href="/portfolio" >
+                      <Link href="/portfolio">
+                        <a className="link" >
                           <span className="nm">03.</span>Case Studies
                         </a>
                       </Link>

@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 
-const NextProject = ({ projectImage, projectTitle, projectSlug,videoProject }) => {
-  useEffect(() => {
-    console.log("Next Project Data: ", projectImage, projectTitle, projectSlug);
-  }, []);
+const NextProject = ({ projectImage, projectTitle, projectSlug }) => {
+  
 
   return (
     <section className="next-prog section-padding">
