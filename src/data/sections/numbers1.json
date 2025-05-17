@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "icon": "pe-7s-smile",
+    "txt": "Happy Clients",
+    "value": "1050"
+  },
+  {
+    "id": 2,
+    "icon": "pe-7s-portfolio",
+    "txt": "Completed Projects",
+    "value": "1300"
+  },
+  {
+    "id": 3,
+    "icon": "pe-7s-cloud-download",
+    "txt": "Total Sales Genarated",
+    "value": "2"
+  }
+
+]
