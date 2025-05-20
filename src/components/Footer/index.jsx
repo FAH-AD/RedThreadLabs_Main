@@ -41,18 +41,10 @@ const Footer = ({ noSubBG }) => {
               <div className="social-icon">
                 <h6 className="custom-font stit simple-btn">Follow Us</h6>
                 <div className="social">
-                  <a href="#0" className="icon">
-                    <i className="fab fa-facebook-f"></i>
+                  <a href="https://www.linkedin.com/company/redthreadlabs"  className="icon">
+                    <i style={{fontSize:'25px'}} className="fab fa-linkedin"></i>
                   </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-pinterest"></i>
-                  </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-behance"></i>
-                  </a>
+                  
                 </div>
               </div>
             </div>
@@ -90,20 +82,7 @@ const Footer = ({ noSubBG }) => {
                 )}
               </Formik>
             </div>
-            <div className="insta">
-              <h6 className="custom-font stit simple-btn">Instagram Post</h6>
-              <div className="insta-gallary">
-                <a href="#0">
-                  <img src="/img/insta/1.jpg" alt="" />
-                </a>
-                <a href="#0">
-                  <img src="/img/insta/2.jpg" alt="" />
-                </a>
-                <a href="#0">
-                  <img src="/img/insta/3.jpg" alt="" />
-                </a>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div className="copyrights text-center">

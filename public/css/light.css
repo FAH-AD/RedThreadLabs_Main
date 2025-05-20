@@ -2890,6 +2890,19 @@ header.simpl {
         -o-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
         transition: all 0.5s cubic-bezier(1, 0, 0, 1); }
 
+           @media (max-width: 767px) {
+  .about .ftbox ul {
+    flex-direction: column !important;
+  }
+  .about .ftbox ul li {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .about .ftbox ul li.space {
+    margin: 0 0 20px 0 !important;
+  }
+}
+
 .js-scroll__content {
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;

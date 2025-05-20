@@ -27,11 +27,11 @@ const Services = () => {
             <h4 className="custom-font">
               Best Of <br /> Our Features
             </h4>
-            <Link href="/about/about-dark">
+            {/* <Link href="/about/about-dark">
               <a className="btn-curve btn-bord btn-lit mt-40">
                 <span>See All Services</span>
               </a>
-            </Link>
+            </Link> */}
           </div>
           <div
             className="col-lg-3 col-md-6 item-box wow fadeInLeft"

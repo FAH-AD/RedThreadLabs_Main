@@ -7,8 +7,9 @@
 /coverage
 
 # Next.js build output
-
-
+/.next/
+/out/
+/public_html/
 
 # Production
 

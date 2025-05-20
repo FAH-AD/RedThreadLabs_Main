@@ -6,6 +6,13 @@ import AboutUs1Date from "../../data/sections/about-us1.json";
 const AboutUs = () => {
   return (
     <div className="about section-padding">
+      <style>{`
+        @media (max-width: 767px) {
+          .ft-list {
+            flex-direction: column !important;
+          }
+        }
+      `}</style>
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
@@ -49,7 +56,7 @@ const AboutUs = () => {
                 </p>
               </Split>
               <div className="ftbox mt-30">
-                <ul>
+                <ul className="ft-list">
                   {AboutUs1Date.features.map((feature) => (
                     <li
                       key={feature.id}
@@ -80,3 +87,6 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+
+

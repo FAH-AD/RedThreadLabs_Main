@@ -140,18 +140,10 @@ const IntroWithSlider = ({ sliderRef }) => {
         ></div>
 
         <div className="social-icon">
-          <a href="#0">
-            <i className="fab fa-facebook-f"></i>
+          <a href="https://www.linkedin.com/company/redthreadlabs">
+            <i style={{fontSize:'25px'}} className="fab fa-linkedin"></i>
           </a>
-          <a href="#0">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#0">
-            <i className="fab fa-behance"></i>
-          </a>
-          <a href="#0">
-            <i className="fab fa-pinterest-p"></i>
-          </a>
+          
         </div>
       </div>
     </header>

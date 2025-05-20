@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ModalVideo from "react-modal-video";
+import Link from "next/link";
 import "react-modal-video/css/modal-video.css";
 
 const VideoWithTestimonials = () => {
@@ -31,31 +32,7 @@ const VideoWithTestimonials = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="vid-area">
-                <div className="vid-icon">
-                  {typeof window !== "undefined" && (
-                    <ModalVideo
-                      channel="vimeo"
-                      autoplay
-                      isOpen={isOpen}
-                      videoId="127203262"
-                      onClose={() => setOpen(false)}
-                    />
-                  )}
-                  <a
-                    className="vid"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(true);
-                    }}
-                    href="https://vimeo.com/127203262"
-                  >
-                    <div className="vid-butn">
-                      <span className="icon">
-                        <i className="fas fa-play"></i>
-                      </span>
-                    </div>
-                  </a>
-                </div>
+                
 
                 <div className="cont">
                   <Split>
@@ -66,7 +43,7 @@ const VideoWithTestimonials = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 offset-lg-1">
+            <div className="col-lg-5 offset-lg-1" style={{cursor:'default'}}>
               <div className="testim-box">
                 <div className="head-box">
                   <h6 className="wow fadeIn" data-wow-delay=".5s">
@@ -82,77 +59,38 @@ const VideoWithTestimonials = () => {
                   data-wow-delay=".5s"
                 >
                   <div className="item">
-                    <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
+                   
+                      <p>
+                    RedThreadLabs nailed it. Their video boosted our engagement by 28% and sales by 15%, while their strategic approach tripled our organic traffic. Professional, efficient, and delivers real results. The whole process felt smooth and easy from onboarding to after sales there was little to no friction.
+                    
                     </p>
+                 
                     <div className="info">
                       <div className="img">
                         <div className="img-box">
-                          <img src="/img/clients/1.jpg" style={{width:'100%',height:'100%'}} alt="" />
+                          <img src="/clients/snus client.jpg" style={{width:'100%',height:'',objectFit:'cover'}} alt="" />
                         </div>
                       </div>
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                           Thijs Anderson
                           </h6>
                           <span className="author-details">
-                            Co-founder, Colabrio
+                            Marketing Director, Snus.be
                           </span>
                         </div>
                       </div>
                     </div>
+                    <Link href="/projects/promotional-content/">
+                            <a  style={{marginTop:'2rem'}}>Check Case Study</a>
+                          </Link>
+                     
+                    
                   </div>
-                  <div className="item">
-                    <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
-                    </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <img src="/img/clients/2.jpg" style={{width:'100%',height:'100%'}} alt="" />
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name custom-font">
-                            Alex Regelman
-                          </h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <p>
-                      Nulla metus metus ullamcorper vel tincidunt sed euismod
-                      nibh volutpat velit class aptent taciti sociosqu ad
-                      litora.
-                    </p>
-                    <div className="info">
-                      <div className="img">
-                        <div className="img-box">
-                          <img src="/img/clients/3.jpg" style={{width:'100%',height:'100%'}} alt="" />
-                        </div>
-                      </div>
-                      <div className="cont">
-                        <div className="author">
-                          <h6 className="author-name custom-font">
-                            Alex Regelman
-                          </h6>
-                          <span className="author-details">
-                            Co-founder, Colabrio
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
+
+
                 </Slider>
               </div>
             </div>

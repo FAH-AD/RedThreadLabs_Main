@@ -45,7 +45,9 @@ const Clients = ({ theme, subBG }) => {
                         )}
                         <Split>
                           <a
-                            href="#0"
+                            href={item.url.startsWith('http') ? item.url : `https://${item.url}`}
+                            target="_blank"
+                             rel="noopener noreferrer"
                             className="link words chars splitting"
                             data-splitting
                           >
@@ -91,11 +93,13 @@ const Clients = ({ theme, subBG }) => {
                         {theme === "light" ? (
                           <img src={item.lightImage} alt="" />
                         ) : (
-                          <img src={item.darkImage} alt="" />
+                          <img src={item.darkImage} style={{borderRadius:'10px'}} alt="" />
                         )}
                         <Split>
                           <a
-                            href="#0"
+                            href={item.url.startsWith('http') ? item.url : `https://${item.url}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="link words chars splitting"
                             data-splitting
                           >

@@ -17,7 +17,9 @@ const NavbarFullMenu = ({ theme, lr }) => {
       >
         <div className="container-fluid">
           <div className="logo">
-            <a href="#0">
+            <Link href='/'>
+           
+            <a>
               {theme ? (
                 theme === "light" ? (
                   <h4>RedThreadLabs</h4>
@@ -28,6 +30,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                 <h4>RedThreadLabs</h4>
               )}
             </a>
+             </Link>
           </div>
           <div className="menu-icon">
             <span className="icon">
@@ -59,7 +62,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                     </div>
                    
                   </li>
-                  <li>
+                  {/* <li>
                     <div className="o-hidden">
                       <Link href="/aboutus">
                         <a className="link">
@@ -67,12 +70,12 @@ const NavbarFullMenu = ({ theme, lr }) => {
                         </a>
                       </Link>
                     </div>
-                  </li>
+                  </li> */}
                   <li>
                   <div className="o-hidden">
                       <Link href="/portfolio">
                         <a className="link" >
-                          <span className="nm">03.</span>Case Studies
+                          <span className="nm">02.</span>Case Studies
                         </a>
                       </Link>
                     </div>
@@ -84,7 +87,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                     <div className="o-hidden">
                       <Link href="/contact">
                         <a className="link">
-                          <span className="nm">04.</span>Contact
+                          <span className="nm">03.</span>Contact
                         </a>
                       </Link>
                     </div>
