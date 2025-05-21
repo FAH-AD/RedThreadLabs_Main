@@ -6,7 +6,7 @@ const ProjectDetailsDescription = ({  title, description }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-3 col-md-4">
-            <div className="htit">
+            <div className="htit main-title">
               <h4>
                 <span>02 </span> {title}
               </h4>

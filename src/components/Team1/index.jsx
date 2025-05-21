@@ -32,78 +32,39 @@ class Team1 extends React.Component {
       <section className="team section-padding">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 valign">
+            <div className="col-lg-6 valign">
               <div className="full-width">
                 <div className="sec-head custom-font mb-0">
-                  <h6>Employees</h6>
-                  <h3>Our Team.</h3>
+                  <h6>The Team </h6>
+                  <h3>Our Leadership.</h3>
                 </div>
-                {this.renderArrows()}
+                
               </div>
             </div>
-            <div className="col-lg-8">
-              <Slider
-                className="team-container"
-                {...{
-                  ref: (c) => (this.slider = c),
-                  dots: false,
-                  infinite: true,
-                  arrows: true,
-                  autoplay: true,
-                  slidesToScroll: 1,
-                  slidesToShow: 4,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 4,
-                      },
-                    },
-                    {
-                      breakpoint: 767,
-                      settings: {
-                        slidesToShow: 2,
-                      },
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                      },
-                    },
-                  ],
-                }}
-              >
+            <div className="col-lg-6 team-imgContainer">
+              
                 {team1Data.map((item) => (
                   <div
                     className="item wow fadeInUp"
                     data-wow-delay=".3s"
                     key={item.id}
                   >
-                    <div className="img wow imago">
-                      <img src={item.image} alt="" />
+                    <div className="img wow ">
+                      <img className="team-img" src={item.image} alt="" />
                     </div>
                     <div className="info">
                       <h5>{item.name}</h5>
                       <span>{item.title}</span>
                       <div className="social">
-                        <a href="#0">
-                          <i className="fab fa-facebook-f"></i>
+                        <a href="">
+                          <i className="fab fa-linkedin"></i>
                         </a>
-                        <a href="#0">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="#0">
-                          <i className="fab fa-behance"></i>
-                        </a>
-                        <a href="#0">
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
+                        
                       </div>
                     </div>
                   </div>
                 ))}
-              </Slider>
+              
             </div>
           </div>
         </div>

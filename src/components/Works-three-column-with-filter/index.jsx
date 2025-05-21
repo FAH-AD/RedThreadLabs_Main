@@ -68,7 +68,7 @@ const WorksThreeColumnWithFilter = ({ filterPosition, projects }) => {
                   )}
                 </div>
                 <div className="cont">
-                  <h6>{project.title}</h6>
+                  <h6 className="main-title">{project.title}</h6>
                   <span className="d-flex" style={{gap: "14px",justifyContent: "center"}}>
                     {project.tags?.map((tag, index) => (
                       <p key={index}>{tag}</p>

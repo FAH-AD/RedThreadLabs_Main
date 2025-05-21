@@ -62,7 +62,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                     </div>
                    
                   </li>
-                  {/* <li>
+                  <li>
                     <div className="o-hidden">
                       <Link href="/aboutus">
                         <a className="link">
@@ -70,12 +70,12 @@ const NavbarFullMenu = ({ theme, lr }) => {
                         </a>
                       </Link>
                     </div>
-                  </li> */}
+                  </li>
                   <li>
                   <div className="o-hidden">
                       <Link href="/portfolio">
                         <a className="link" >
-                          <span className="nm">02.</span>Case Studies
+                          <span className="nm">03.</span>Case Studies
                         </a>
                       </Link>
                     </div>
@@ -87,7 +87,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                     <div className="o-hidden">
                       <Link href="/contact">
                         <a className="link">
-                          <span className="nm">03.</span>Contact
+                          <span className="nm">04.</span>Contact
                         </a>
                       </Link>
                     </div>
@@ -105,7 +105,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
                 <div className="item">
                   <h6>Address :</h6>
                   <p>
-                  A32 ,Kalma Heights,Lahore Pakistan.
+                Vinkenstraat 51, 2160, Antwerp Belgium
                   </p>
                 </div>
                 <div className="item">

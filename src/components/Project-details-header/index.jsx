@@ -23,14 +23,14 @@ const ProjectDetailsHeader = ({
           <div className="col-lg-7 col-md-9">
             <div className="cont">
               <h6>{category}</h6>
-              <h2>{title}</h2>
+              <h2 className="slideTitle">{title}</h2>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-3">
             <div className="item mt-30">
-              <h6 className="main-text-color">Client</h6>
+              <h6 className="main-text-color main-title">Client</h6>
               <p>
                 <a href={clientUrl}>{client}</a>
               </p>
@@ -38,12 +38,12 @@ const ProjectDetailsHeader = ({
           </div>
           <div className="col-lg-3">
             <div className="item mt-30">
-              <h6>Date</h6>
+              <h6 className="main-title">Date</h6>
               <p>{date}</p>
             </div>
           </div>
           <div className="col-lg-3">
-            <div className="item mt-30">
+            <div className="item main-title mt-30">
               <h6>Categories</h6>
               <p>
                 {categories.map((cat, index) => (
@@ -57,7 +57,7 @@ const ProjectDetailsHeader = ({
           </div>
           <div className="col-lg-3">
             <div className="item mt-30">
-              <h6>Tags</h6>
+              <h6 className="main-title">Tags</h6>
               <p>
                 {tags.map((tag, index) => (
                   <React.Fragment key={index}>

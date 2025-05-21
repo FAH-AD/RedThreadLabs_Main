@@ -31,7 +31,7 @@ const Footer = ({ noSubBG }) => {
                     <span>Email : </span> redthreadlabs_support@website.com
                   </li>
                   <li className="d-flex">
-                    <span>Address : </span> <span>Vekestraat 51, 2160, Antwerp Belgium  <br />  A32 ,Kalma Heights,Lahore Pakistan .   </span>
+                    <span>Address : </span> <span>Vinkenstraat 51, 2160, Antwerp Belgium  <br />  A32 ,Kalma Heights,Lahore Pakistan .   </span>
                   </li>
                   <li className="d-flex" >
                     <span>Phone : </span> <span>(+32) 471 31 35 54 <br/>(+92) 313 0471004,</span> 
@@ -41,7 +41,7 @@ const Footer = ({ noSubBG }) => {
               <div className="social-icon">
                 <h6 className="custom-font stit simple-btn">Follow Us</h6>
                 <div className="social">
-                  <a href="https://www.linkedin.com/company/redthreadlabs"  className="icon">
+                  <a href="https://www.linkedin.com/company/redthreadlabs" target="_blank"  rel="noreferrer" className="icon">
                     <i style={{fontSize:'25px'}} className="fab fa-linkedin"></i>
                   </a>
                   

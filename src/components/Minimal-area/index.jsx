@@ -19,7 +19,7 @@ const MinimalArea = () => {
             <div className="img">
               <img
                 className="thumparallax-down"
-                src="/img/min-area.jpg"
+                src="/assets/aboutUs.jpg"
                 alt=""
               />
             </div>
@@ -28,7 +28,7 @@ const MinimalArea = () => {
             <div className="content">
               <Split>
                 <h4
-                  className="wow custom-font words chars splitting"
+                  className="wow custom-font words chars slideTitle splitting"
                   data-splitting
                 >
                   About us.
@@ -37,33 +37,32 @@ const MinimalArea = () => {
 
               <Split>
                 <p className="wow txt words chars splitting" data-splitting>
-                  Our creative Ad agency is ranked among the finest in the US.
-                  We cultivate smart ideas for start-ups and seasoned players.
+                  From Europe to East, our edge comes from seeing how brands move people in different worlds — and applying that here, where it counts.
                 </p>
               </Split>
               <ul className="feat">
                 <li className="wow fadeInUp" data-wow-delay=".2s">
-                  <h6>
+                  <h6 className="main-title">
                     <span>1</span> Our Mission
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                   Helping brands grow with clarity, strategy, and creative that works across markets.
                   </p>
                 </li>
                 <li className="wow fadeInUp" data-wow-delay=".4s">
-                  <h6>
+                  <h6 className="main-title">
                     <span>2</span> Our Goals
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                    Empowering brands with strategic creativity and seamless execution that drives real growth.
                   </p>
                 </li>
                 <li className="wow fadeInUp" data-wow-delay=".6s">
-                  <h6>
+                  <h6 className="main-title">
                     <span>3</span> Why Us?
                   </h6>
                   <p>
-                    luctus massa ipsum at tempus eleifend congue lectus bibendum
+                   Because experience meets insight — understanding diverse markets, mastering the craft, and delivering on your timeline with precision.
                   </p>
                 </li>
               </ul>

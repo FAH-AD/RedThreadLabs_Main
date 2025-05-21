@@ -122,7 +122,7 @@ const ShowcasesOneCenter = () => {
                         <h1>
                           <Link href={projectSlug}>
                             <a>
-                              <div className="stroke">{project.title}</div>
+                              <div className="stroke slideTitle">{project.title}</div>
 
                             </a>
                           </Link>
@@ -135,7 +135,7 @@ const ShowcasesOneCenter = () => {
                         <h1>
                           <Link href={projectSlug}>
                             <a>
-                              <div className="stroke">{project.title}</div>
+                              <div className="stroke slideTitle">{project.title}</div>
 
                             </a>
                           </Link>
@@ -183,6 +183,10 @@ const ShowcasesOneCenter = () => {
               </div>
             </div>
           </div>
+           {/* <Link href="/portfolio-details">
+              <a className="check-all-projects-button">All Case Studies</a>
+            </Link> */}
+
         </div>
       </div>
     </header>

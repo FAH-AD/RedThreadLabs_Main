@@ -57,7 +57,7 @@ const Works2Dark = () => {
             <div className="col-lg-9 col-md-11 static">
               <div className="capt mt-50">
                 <div className="parlx">
-                  <h2 className="custom-font">Our amazing works</h2>
+                  <h2 className="custom-font slideTitle">Our amazing works</h2>
                   <p>
                   Explore a curated selection of our finest projects. Each piece is a testament to our dedication and creativity.
                   </p>

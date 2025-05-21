@@ -48,9 +48,9 @@
     ]
   },
   "..\\..\\node_modules\\react-player\\lib\\players\\index.js -> ./SoundCloud": {
-    "id": 2780,
+    "id": 2648,
     "files": [
-      "static/chunks/reactPlayerSoundCloud.67f7466c7cb71586.js"
+      "static/chunks/reactPlayerSoundCloud.89d3997d4a90552a.js"
     ]
   },
   "..\\..\\node_modules\\react-player\\lib\\players\\index.js -> ./Streamable": {

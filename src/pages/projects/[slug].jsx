@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { FaArrowLeft } from 'react-icons/fa'; // Add this at the top if not already
+
 import DarkTheme from "../../layouts/Dark";
 import Navbar from "../../components/Navbar";
 import ProjectDetailsHeader from "../../components/Project-details-header";
@@ -55,6 +57,38 @@ const ProjectDetails = () => {
   return (
     <DarkTheme>
       <Navbar />
+
+      <div style={{
+  position: 'relative',
+  padding: '1rem',
+  top:'5rem',
+  zIndex: 5,
+}}>
+  <button
+   onClick={() => router.push('/portfolio')}
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '8px',
+      backgroundColor: '#111',
+      color: '#fff',
+      padding: '10px 16px',
+      border: 'none',
+      borderRadius: '30px',
+      cursor: 'pointer',
+      fontSize: '14px',
+      fontWeight: '500',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+      transition: 'transform 0.2s ease',
+    }}
+    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+  >
+    <FaArrowLeft />
+    Back
+  </button>
+</div>
+
       {/* Project Details Header */}
       <ProjectDetailsHeader
         backgroundImage={project.image}

@@ -16,7 +16,7 @@ const ContactHeader = ({ sliderRef }) => {
           <div className="col-lg-9 col-md-11 static">
             <div className="capt mt-50">
               <div className="parlx">
-                <h2 className="custom-font">
+                <h2 className="custom-font main-title-e">
                   <span>Let&apos;s</span>Talk About Your project.
                 </h2>
                 <p>
@@ -26,7 +26,7 @@ const ContactHeader = ({ sliderRef }) => {
               </div>
 
               <div className="bactxt custom-font valign">
-                <span className="full-width">Contact</span>
+                <span className="full-width slideTitle">Contact</span>
               </div>
             </div>
           </div>

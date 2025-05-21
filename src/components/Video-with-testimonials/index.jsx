@@ -36,7 +36,7 @@ const VideoWithTestimonials = () => {
 
                 <div className="cont">
                   <Split>
-                    <h3 className="wow" data-splitting>
+                    <h3 className="wow main-title" data-splitting>
                       So that&apos;s us. There&apos;s no other way to put it.
                     </h3>
                   </Split>
@@ -73,7 +73,7 @@ const VideoWithTestimonials = () => {
                       </div>
                       <div className="cont">
                         <div className="author">
-                          <h6 className="author-name custom-font">
+                          <h6 className="author-name slideTitle custom-font">
                            Thijs Anderson
                           </h6>
                           <span className="author-details">

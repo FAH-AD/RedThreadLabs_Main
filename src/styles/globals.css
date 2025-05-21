@@ -212,6 +212,23 @@ section.team.section-padding {
 .check-all-projects-button:hover::before {
   left: 0;
 }
+@media screen and (max-width: 768px) {
+  .check-all-projects-button {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+}
 .main-text-color{
   color: #75dab4;
 }

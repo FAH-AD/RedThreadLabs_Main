@@ -94,7 +94,7 @@ const IntroWithSlider = ({ sliderRef }) => {
                       <div className="col-lg-7 col-md-9">
                         <div className="caption center">
                           <Split>
-                            <h1 className="words chars splitting">
+                            <h1 className="words slideTitle chars titleSplit">
                               {typeof slide.title === "object" ? (
                                 <>
                                   {slide.title.first} <br />
@@ -105,7 +105,7 @@ const IntroWithSlider = ({ sliderRef }) => {
                               )}
                             </h1>
                           </Split>
-                          {slide?.content && <p>{slide.content}</p>}
+                          {slide?.content && <p className="slide-content">{slide.content}</p>}
                           <Link href="/aboutus">
                             <a className="btn-curve btn-lit mt-30">
                               <span>Look More</span>
@@ -140,7 +140,7 @@ const IntroWithSlider = ({ sliderRef }) => {
         ></div>
 
         <div className="social-icon">
-          <a href="https://www.linkedin.com/company/redthreadlabs">
+          <a href="https://www.linkedin.com/company/redthreadlabs" target="_blank"  rel="noreferrer">
             <i style={{fontSize:'25px'}} className="fab fa-linkedin"></i>
           </a>
           

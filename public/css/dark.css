@@ -1,52 +1,4 @@
-/*-----------------------------------------------------------------------------------
 
-    Theme Name: Avo
-    Theme URI: http://
-    Description: Creative Agency & Portfolio
-    Author: ThemesCamp
-    Author URI: http://themeforest.net/user/ThemesCamp
-    Version: 1.0
-
------------------------------------------------------------------------------------*/
-/* ----------------------------------------------------------------
-
-== Table Of Content
-
-    |--- BASE
-
-        |- typography
-        |- helper classes
-
-    |--- SHORTCODES
-
-        |- extra
-        |- overlay
-        |- section-heading
-        |- buttons
-        |- navbar
-        |- sliders
-        |- intro
-        |- feature-box
-        |- clients
-        |- counter
-        |- portfolio
-        |- process
-        |- progress-bar
-        |- tabs
-        |- team
-        |- testimonials
-        |- blog
-        |- contact-form
-        |- footers
-
-    |--- BASE
-
-        |- responsive
-	
-
-
----------------------------------------------------------------- */
-/* ====================== [ Start Typography  ] ====================== */
 
 @import "/css/bootstrap.min.css";
 @import "/css/animate.css";
@@ -68,7 +20,21 @@ body {
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden !important;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Inter', sans-serif; }
+
+  /* Font Updates */
+  .slideTitle{
+    font-family: 'Playfair Display',sans-serif !important;
+    letter-spacing: 2px !important;
+    word-spacing: 4px !important;
+  }
+  .slide-content{
+    font-family: 'Inter',sans-serif !important;
+    /* word-spacing: 2px !important; */
+    letter-spacing: 1px !important;
+  }
+  .tileSplit .whitespace {
+  width: 20px; }
   body.dark2 {
     background: #1e2128; }
     body.dark2 .main-content {
@@ -827,7 +793,7 @@ a, span {
   animation-delay: calc(30ms * var(--char-index)); }
 
 .splitting .whitespace {
-  width: 5px; }
+  width: 10px; }
 
 @-webkit-keyframes fadeInUp {
   0% {
@@ -1162,8 +1128,22 @@ body {
 
 .main-title {
   font-weight: 600;
+  font-family: 'IBM Plex Sans',sans-serif !important;
   line-height: 1.5;
   margin-bottom: 15px; }
+  .content-font{
+      font-family: 'Inter',sans-serif !important;
+
+  }
+  .main-title-e {
+  font-weight: 600;
+  font-family: 'IBM Plex Sans',sans-serif !important;
+  line-height: 1;
+  margin-bottom: 10px; }
+  .content-font{
+      font-family: 'Inter',sans-serif !important;
+
+  }
 
 .extra-title {
   font-weight: 700; }
@@ -2404,7 +2384,7 @@ header.simpl {
       text-transform: capitalize;
       color: #75dab4; }
   .works-header .capt .bactxt {
-    font-size: 30vw;
+    font-size: 25vw;
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
@@ -2911,7 +2891,11 @@ header.simpl {
     z-index: 2; }
   .services .item-box {
     padding: 80px 30px;
-    text-align: center; }
+    text-align: center;
+     font-family: 'IBM Plex Sans',sans-serif !important;
+
+  
+  }
     .services .item-box:nth-of-type(2) {
       background: #181b21; }
     .services .item-box:nth-of-type(3) {
@@ -3820,6 +3804,7 @@ header.simpl {
         -o-transition: all .3s;
         transition: all .3s; }
       .team .item .info .social {
+        display: none;
         position: absolute;
         bottom: -300px;
         left: 0;
@@ -3836,10 +3821,10 @@ header.simpl {
           margin: 0 8px;
           color: #75dab4; }
     .team .item:hover .info h5, .team .item:hover .info span {
-      opacity: 0; }
-    .team .item:hover .info .social {
-      bottom: 0;
       opacity: 1; }
+    /* .team .item:hover .info .social {
+      bottom: 0;
+      opacity: 1; } */
   .team .navs .prev, .team .navs .next {
     color: #ccc;
     font-size: 13px;
@@ -3870,6 +3855,15 @@ header.simpl {
       line-height: 1;
       background: #75dab4;
       opacity: 1; }
+.team-imgContainer{
+  display: flex !important;
+  padding: 20px;
+
+}
+.team-img{
+  /* width: 220px !important; */
+  height: 228px !important;
+}
 
 .team-crv .img-box .img {
   min-width: 150px !important; }

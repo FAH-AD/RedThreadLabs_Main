@@ -7,7 +7,7 @@ const ProjectDetailsIntroduction = ({  title, description, listItems }) => {
         <div className="row">
           <div className="col-lg-3 col-md-4">
             <div className="htit">
-              <h4 style={{whiteSpace: "nowrap"}} >
+              <h4 className="main-title" style={{whiteSpace: "nowrap"}} >
                 <span>01 </span> {title}
               </h4>
             </div>

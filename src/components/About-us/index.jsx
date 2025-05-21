@@ -51,7 +51,7 @@ const AboutUs = () => {
                 </h3>
               </Split>
               <Split>
-                <p className="words chars splitting wow txt" data-splitting>
+                <p className="words chars splitting wow content-font txt" data-splitting>
                   {AboutUs1Date.content}
                 </p>
               </Split>

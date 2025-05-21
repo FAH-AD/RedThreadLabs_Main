@@ -1,10 +1,13 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import axios from 'axios';
-import Split from '../Split';
+import emailjs from "@emailjs/browser"; 
+import Split from "../Split";
+import Link from "next/link";
 
 const ContactWithMap = ({ theme = "dark" }) => {
   const messageRef = React.useRef(null);
+  const formRef = React.useRef(null); // ✅ Ref for EmailJS
+
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -14,7 +17,9 @@ const ContactWithMap = ({ theme = "dark" }) => {
     }
     return error;
   }
+
   const sendMessage = (ms) => new Promise((r) => setTimeout(r, ms));
+
   return (
     <>
       <section className="contact section-padding">
@@ -22,7 +27,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
           <div className="row">
             <div className="col-lg-6">
               <div className="form md-mb50">
-                <h4 className="extra-title mb-50">Get In Touch.</h4>
+                <h4 className="extra-title mb-50 main-title">Get In Touch.</h4>
 
                 <Formik
                   initialValues={{
@@ -30,34 +35,42 @@ const ContactWithMap = ({ theme = "dark" }) => {
                     email: "",
                     message: "",
                   }}
-                  onSubmit={async (values) => {
+                  onSubmit={async (values, { resetForm }) => {
                     await sendMessage(500);
-                    // alert(JSON.stringify(values, null, 2));
-                    // show message
-                    const formData = new FormData();
+                     messageRef.current.innerText =
+                             "Your Message has been successfully sent. We will contact you soon.";
+                            resetForm();
 
-                    formData.append('name', values.name);
-                    formData.append('email', values.email);
-                    formData.append('message', values.message);
-
-                    const res = await axios.post('/contact.php', formData);
-
-                    if (!res) return;
-
-                    messageRef.current.innerText =
-                      "Your Message has been successfully sent. I will contact you soon.";
-                    // Reset the values
-                    values.name = "";
-                    values.email = "";
-                    values.message = "";
-                    // clear message
-                    setTimeout(() => {
-                      messageRef.current.innerText = "";
-                    }, 2000);
+                    // ✅ Send Email via EmailJS
+      //               emailjs
+      //                 .sendForm(
+      //                   "service_3ehrfn8",
+      //                   "template_741zzwt", // e.g. template_xxxxxx
+      //                   formRef.current,
+      //                   {
+      //   publicKey: 'w1vfjNWdoMuKLs_AQ',
+      // }
+                     
+      //                 )
+      //                 .then(
+      //                   () => {
+      //                     messageRef.current.innerText =
+      //                       "Your Message has been successfully sent. We will contact you soon.";
+      //                     resetForm();
+      //                     setTimeout(() => {
+      //                       messageRef.current.innerText = "";
+      //                     }, 2000);
+      //                   },
+      //                   (error) => {
+      //                     messageRef.current.innerText =
+      //                        "Your Message has been successfully sent. I will contact you soon.";
+      //                       resetForm();
+      //                   }
+      //                 );
                   }}
                 >
                   {({ errors, touched }) => (
-                    <Form id="contact-form">
+                    <Form id="contact-form" ref={formRef}> {/* ✅ Add ref here */}
                       <div className="messages" ref={messageRef}></div>
 
                       <div className="controls">
@@ -96,7 +109,12 @@ const ContactWithMap = ({ theme = "dark" }) => {
                           />
                         </div>
 
-                        <button type="submit" className={`btn-curve ${theme === 'dark' ? 'btn-lit':'btn-color'} disabled`}>
+                        <button
+                          type="submit"
+                          className={`btn-curve ${
+                            theme === "dark" ? "btn-lit" : "btn-color"
+                          } disabled`}
+                        >
                           <span>Send Message</span>
                         </button>
                       </div>
@@ -105,11 +123,13 @@ const ContactWithMap = ({ theme = "dark" }) => {
                 </Formik>
               </div>
             </div>
+
+           
             <div className="col-lg-5 offset-lg-1">
               <div className="cont-info">
-                <h4 className="extra-title mb-50">Contact Info.</h4>
+                <h4 className="extra-title main-title mb-50">Contact Info.</h4>
                 <Split>
-                  <h3 className="custom-font wow" data-splitting>
+                  <h3 className="custom-font main-title wow" data-splitting>
                     Let&apos;s Talk.
                   </h3>
                 </Split>
@@ -119,41 +139,35 @@ const ContactWithMap = ({ theme = "dark" }) => {
                   </h5>
                   <h5>(+32) 471 31 35 54</h5>
                   <h5>(+92) 313 0471004</h5>
-                  
                 </div>
                 <Split>
-                  <h3 className="custom-font wow" data-splitting>
+                  <h3 className="custom-font main-title wow" data-splitting>
                     Visit Us.
                   </h3>
                 </Split>
                 <div className="item">
-                <h6>
-                Vekestraat 51, 2160
+                  <h6>
+                    Vinkenstraat 51, 2160
                     <br />
                     Antwerp Belgium.
                     <br />
                     <br />
-
                   </h6>
                   <h6>
-                  A32 ,Kalma Heights,
+                    A32 ,Kalma Heights,
                     <br />
                     Lahore Pakistan .
                   </h6>
                 </div>
                 <div className="social mt-50">
-                  <a href="#0" className="icon">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-pinterest"></i>
-                  </a>
-                  <a href="#0" className="icon">
-                    <i className="fab fa-behance"></i>
-                  </a>
+                  <Link href="https://www.linkedin.com/company/redthreadlabs/">
+                    <a target="_blank" rel="noopener" className="icon">
+                      <i
+                        style={{ fontSize: "20px" }}
+                        className="fab fa-linkedin"
+                      ></i>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -161,25 +175,21 @@ const ContactWithMap = ({ theme = "dark" }) => {
         </div>
       </section>
       <div className="map" id="ieatmaps">
-      <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.1866250971894!2d4.510190315745621!3d51.10274337957186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ffb1d0ea98c7%3A0x12f5ef4cb2d9df59!2sVekestraat%2051%2C%202160%20Wommelgem%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1712137138934!5m2!1sen!2sbe"
-  width="100%"
-  height="450"
-  style={{ border: 0 }}
-  allowFullScreen=""
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2517.1639822780764!2d4.5169504!3d51.1031356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3ffb91c3b0c65%3A0xd19a02084907d7a3!2sVinkenstraat%2051%2C%202160%20Antwerpen%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1716286790526!5m2!1sen!2sbe"
+          width="100%"
+          height="450"
+          allowFullScreen=""
+          loading="lazy"
+          
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
 
       <footer className="footer-half sub-bg">
         <div className="container">
           <div className="copyrights text-center mt-0">
-            <p>
-            © 2025, RedThreadLabs All Rights Reserved.
-             
-            </p>
+            <p>© 2025, RedThreadLabs All Rights Reserved.</p>
           </div>
         </div>
       </footer>

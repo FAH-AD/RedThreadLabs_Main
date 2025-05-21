@@ -12,7 +12,7 @@ const Services = () => {
             Best Features
           </h6>
           <Split>
-            <h3 className="wow words chars splitting" data-splitting>
+            <h3 className="wow words slideTitle chars splitting" data-splitting>
               Services.
             </h3>
           </Split>
@@ -24,7 +24,7 @@ const Services = () => {
             data-wow-delay=".3s"
             style={{ backgroundImage: "url(https://avo-nextjs.themescamp.com/img/1.jpg)" }}
           >
-            <h4 className="custom-font">
+            <h4 className=" main-title custom-font">
               Best Of <br /> Our Features
             </h4>
             {/* <Link href="/about/about-dark">
@@ -38,7 +38,7 @@ const Services = () => {
             data-wow-delay=".5s"
           >
             <span className="icon pe-7s-paint-bucket"></span>
-            <h6> Web Devlopment</h6>
+            <h6>Custom  <br/> Web   Solutions</h6>
             <p>
               Web designing, SEO based Development, Maintaining, Optimizing
             </p>
@@ -49,7 +49,7 @@ const Services = () => {
           >
             <span className="icon pe-7s-phone"></span>
             <h6>
-              Video <br /> Editing
+            Branded  <br/> Video Solutions
             </h6>
             <p>Social Media ads, Marketing Videos, Brand Promos, Short Form Content.</p>
           </div>
@@ -59,7 +59,7 @@ const Services = () => {
           >
             <span className="icon pe-7s-display1"></span>
             <h6>
-              Marketing<br />Solutions
+              Marketing <br/> Solutions
             </h6>
             <p>Brand Strategy & Positioning, Performance Marketing, Content Marketing & SEO, Email Marketing.</p>
           </div>

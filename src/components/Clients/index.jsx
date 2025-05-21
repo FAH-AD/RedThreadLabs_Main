@@ -11,8 +11,8 @@ const Clients = ({ theme, subBG }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 valign">
-            <div className="sec-head custom-font mb-0">
-              <h6>Clients</h6>
+            <div className="sec-head main-title custom-font mb-0">
+              <h6 style={{letterSpacing:'2px !important'}}>Clients</h6>
               <h3>
                 Our <br /> Clients
               </h3>

@@ -19,7 +19,7 @@ const NextProject = ({ projectImage, projectTitle, projectSlug }) => {
                   <div className="o-hidden full-width">
                     <h1 className="hover-title">
                       <Link href={`/projects/${projectSlug}`}>
-                        <span className="stroke">{projectTitle}</span>
+                        <span className="stroke slideTitle">{projectTitle}</span>
                       </Link>
                     </h1>
                   </div>
@@ -28,7 +28,7 @@ const NextProject = ({ projectImage, projectTitle, projectSlug }) => {
                   <div className="cap full-width">
                     <h1 className="hover-title">
                       <Link href={`/projects/${projectSlug}`}>
-                        <span>{projectTitle}</span>
+                        <span className="slideTitle">{projectTitle}</span>
                       </Link>
                     </h1>
                   </div>
