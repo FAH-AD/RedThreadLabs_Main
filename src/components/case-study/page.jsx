@@ -1,6 +1,8 @@
 "use client"
 
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
+
 
 export default function CaseStudy() {
   return (
@@ -10,14 +12,14 @@ export default function CaseStudy() {
           <span className="case-study-badge">Client Success</span>
           <h2 className="case-study-title">Real Results for Real Brands</h2>
           <p className="case-study-subtitle">
-            See how we've helped our clients achieve remarkable growth.
+            See how we&apos;ve helped our clients achieve remarkable growth.
           </p>
         </div>
 
         <div className="case-study-grid">
           <div className="case-study-image-wrapper">
             <div className="decor-top-left"></div>
-            <img
+            <Image
               src="/assets/testimonial.jpg"
               alt="Case Study"
               width={600}
@@ -30,7 +32,7 @@ export default function CaseStudy() {
           <div className="case-study-content">
             <div className="case-study-brand">BondiBoost</div>
             <h3 className="case-study-quote">
-              "Red Thread's audit alone helped us cut our CPA by 33%."
+             &ldquo;Red Thread&apos;s audit alone helped us cut our CPA by 33%.&rdquo;
             </h3>
             <p className="case-study-author">— BondiBoost, Hair Care Brand</p>
             <div className="case-study-results">
