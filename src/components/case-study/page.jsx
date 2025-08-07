@@ -23,7 +23,7 @@ export default function CaseStudy() {
               src="/assets/testimonial.jpg"
               alt="Case Study"
               width={600}
-              height={400}
+              height={700}
               className="case-study-image"
             />
             <div className="decor-bottom-right"></div>
