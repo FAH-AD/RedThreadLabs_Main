@@ -1,0 +1,90 @@
+import React, { useRef, useEffect, useState } from 'react';
+import Navbar from '../Navbar';
+
+const VideoBackground = () => {
+  const videoRef = useRef(null);
+  const navbarRef = useRef(null);
+  const logoRef = useRef(null);
+  const [dimensions, setDimensions] = useState(null); // Delay usage until client-side
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    updateDimensions(); // Initial run
+    window.addEventListener('resize', updateDimensions);
+
+    if (videoRef.current) {
+      videoRef.current.play().catch(console.error);
+    }
+
+    const handleScroll = () => {
+      if (navbarRef.current) {
+        if (window.pageYOffset > 300) {
+          navbarRef.current.classList.add('nav-scroll');
+        } else {
+          navbarRef.current.classList.remove('nav-scroll');
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  if (!dimensions) return null; // Skip render until client-side
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: `${dimensions.width}px`,
+          height: `${dimensions.height}px`,
+          objectFit: 'cover',
+          zIndex: 0,
+        }}
+      >
+        <source src="/assets/hero-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          color:'black',
+          zIndex: 10,
+        }}
+      >
+        <Navbar nr={navbarRef} lr={logoRef} />
+      </div>
+    </div>
+  );
+};
+
+export default VideoBackground;

@@ -11,7 +11,9 @@ import SkillsCircle from "../components/Skills-circle";
 import VideoWithTestimonials from "../components/Video-with-testimonials";
 import WorksSlider from "../components/Works-slider";
 import DarkTheme from "../layouts/Dark";
-
+import VideoBackground from "../components/video-background";
+import SimpleVideo from "../components/videoBg-simple"
+import CaseStudy from "../components/case-study/page";
 const Homepage1 = () => {
   const fixedSlider = useRef(null);
   const MainContent = useRef(null);
@@ -29,32 +31,38 @@ const Homepage1 = () => {
       }
     }, 1000);
     var navbar = navbarRef.current;
-    if (window.pageYOffset > 300) {
-      navbar.classList.add("nav-scroll");
-    } else {
-      navbar.classList.remove("nav-scroll");
-    }
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        navbar.classList.add("nav-scroll");
-      } else {
-        navbar.classList.remove("nav-scroll");
-      }
-    });
+    // if (window.pageYOffset > 300) {
+    //   navbar.classList.add("nav-scroll");
+    // } else {
+    //   navbar.classList.remove("nav-scroll");
+    // }
+    // window.addEventListener("scroll", () => {
+    //   if (window.pageYOffset > 300) {
+    //     navbar.classList.add("nav-scroll");
+    //   } else {
+    //     navbar.classList.remove("nav-scroll");
+    //   }
+    
   }, [fixedSlider, MainContent, navbarRef]);
 
   return (
     <DarkTheme>
-      <Navbar nr={navbarRef} lr={logoRef} />
-      <IntroWithSlider sliderRef={fixedSlider} />
+      {/* <Navbar nr={navbarRef} lr={logoRef} /> */}
+      <VideoBackground />
+
+      {/* <IntroWithSlider sliderRef={fixedSlider} /> */}
       <div ref={MainContent} className="main-content relative">
-        <AboutUs />
-        <Services />
+          <Clients theme="dark" />
+          <SimpleVideo src={'/assets/portfolio-video.mp4'} />
+        {/* <AboutUs /> */}
         <Numbers />
+        <CaseStudy/>
+        <Services />
+        
         {/* <WorksSlider /> */}
         <VideoWithTestimonials />
         <SkillsCircle theme="dark" subBG />
-        <Clients theme="dark" />
+      
         <CallToAction subBG />
         <Footer />
       </div>
