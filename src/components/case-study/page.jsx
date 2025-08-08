@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
-import { ArrowRight } from "lucide-react"
-import Image from "next/image"
-
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function CaseStudy() {
   return (
@@ -23,16 +22,21 @@ export default function CaseStudy() {
               src="/assets/testimonial.jpg"
               alt="Case Study"
               width={600}
-              height={750}
+              height={800}
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="/assets/testimonial-min.jpg" // low-res small version
               className="case-study-image"
             />
+
             <div className="decor-bottom-right"></div>
           </div>
 
           <div className="case-study-content">
             <div className="case-study-brand">BondiBoost</div>
             <h3 className="case-study-quote">
-             &ldquo;Red Thread&apos;s audit alone helped us cut our CPA by 33%.&rdquo;
+              &ldquo;Red Thread&apos;s audit alone helped us cut our CPA by
+              33%.&rdquo;
             </h3>
             <p className="case-study-author">— BondiBoost, Hair Care Brand</p>
             <div className="case-study-results">
@@ -47,8 +51,10 @@ export default function CaseStudy() {
                 </div>
               </div>
               <p className="case-study-description">
-                We identified key friction points in their funnel and boosted retention with sharper funnel content and trust-led creatives.
-                Result? A <span className="highlight">35% lift in ROI</span>— all without touching ad spend.
+                We identified key friction points in their funnel and boosted
+                retention with sharper funnel content and trust-led creatives.
+                Result? A <span className="highlight">35% lift in ROI</span>—
+                all without touching ad spend.
               </p>
             </div>
             <a
@@ -64,5 +70,5 @@ export default function CaseStudy() {
         </div>
       </div>
     </div>
-  )
+  );
 }
