@@ -11,6 +11,7 @@ import SkillsCircle from "../components/Skills-circle";
 import Team1 from "../components/Team1";
 import VideoWithTestimonials from "../components/Video-with-testimonials";
 import DarkTheme from "../layouts/Dark";
+import NavbarFullMenu from "../components/Navbar-full-menu/navbar-full-menu";
 
 const AboutDark = () => {
   const navbarRef = React.useRef(null);
@@ -31,7 +32,7 @@ const AboutDark = () => {
   }, [navbarRef]);
   return (
     <DarkTheme>
-      <Navbar nr={navbarRef} />
+        <NavbarFullMenu color={'dark'} nr={navbarRef}  />
       <AboutHeader />
       <AboutIntro />
       <Services withPadding withOutTitle />

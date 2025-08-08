@@ -19,6 +19,7 @@ const handleFullScreenNavbar = () => {
         animateEl(document.querySelector(".hamenu"), "0px");
         document.querySelector(".topnav .menu-icon ").classList.add("open");
         menuText.innerHTML = "Close";
+        menuText.classList.add("color-white");
         if (navDark) {
           navDark.classList.add("navlit");
         }
@@ -30,6 +31,7 @@ const handleFullScreenNavbar = () => {
         delay(300, animateEl(document.querySelector(".hamenu"), "-100%"));
         document.querySelector(".topnav .menu-icon").classList.remove("open");
         menuText.innerHTML = "Menu";
+        menuText.classList.remove("color-white");
 
         if (navDark) {
           navDark.classList.remove("navlit");

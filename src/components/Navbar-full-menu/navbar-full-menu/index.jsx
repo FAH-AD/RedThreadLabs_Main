@@ -4,16 +4,18 @@ import Split from "../../Split";
 import Link from "next/link";
 import appData from "../../../data/app.json";
 import handleFullScreenNavbar from "../../../common/handleFullScreenNavbar";
+import { IconMenu } from "@tabler/icons-react";
 
-const NavbarFullMenu = ({ theme, lr }) => {
+const NavbarFullMenu = ({ theme, lr,nr,color }) => {
   React.useEffect(() => {
     handleFullScreenNavbar();
   }, []);
   return (
     <>
       <div
+      ref={nr}
         id="navi"
-        className={`topnav ${theme ? (theme === "light" ? "light" : "") : ""}`}
+        className={`topnav  ${theme ? (color === "light" ? "color-white" : "color-black") : ""}`}
       >
         <div className="container-fluid">
           <div className="logo">
@@ -34,8 +36,7 @@ const NavbarFullMenu = ({ theme, lr }) => {
           </div>
           <div className="menu-icon">
             <span className="icon">
-              <i></i>
-              <i></i>
+             <IconMenu size="20"  />
             </span>
             <Split>
               <span className="text" data-splitting>

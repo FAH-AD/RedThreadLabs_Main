@@ -3,6 +3,7 @@ import ContactHeader from "../components/Contact-header";
 import ContactWithMap from "../components/Contact-with-map";
 import Navbar from "../components/Navbar";
 import DarkTheme from "../layouts/Dark";
+import NavbarFullMenu from "../components/Navbar-full-menu/navbar-full-menu";
 
 const Contact = () => {
   const fixedHeader = React.useRef(null);
@@ -33,7 +34,7 @@ const Contact = () => {
   }, []);
   return (
     <DarkTheme>
-      <Navbar nr={navbarRef} />
+        <NavbarFullMenu color={'dark'} nr={navbarRef}  />
       <ContactHeader sliderRef={fixedHeader} />
       <div className="main-content" ref={MainContent}>
         <ContactWithMap />

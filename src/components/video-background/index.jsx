@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Navbar from '../Navbar';
+import NavbarFullMenu from '../Navbar-full-menu/navbar-full-menu';
 
 const VideoBackground = () => {
   const videoRef = useRef(null);
@@ -81,7 +81,7 @@ const VideoBackground = () => {
           zIndex: 10,
         }}
       >
-        <Navbar nr={navbarRef} lr={logoRef} />
+        <NavbarFullMenu color={'dark'} nr={navbarRef}  />
       </div>
     </div>
   );
