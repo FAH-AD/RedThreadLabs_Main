@@ -94,15 +94,8 @@ const VerticalShowcase = () => {
                       fontWeight: "bold",
                     }}
                   >
-                    {project.introduction.title}
-                    <motion.span
-                      variants={{ hover: { x: 0, opacity: 1 } }}
-                      initial={{ x: -10, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      style={{ fontSize: "1.2rem" }}
-                    >
-                      → See Details
-                    </motion.span>
+                    {project.title}
+                  
                   </motion.div>
                 </motion.div>
               </a>
