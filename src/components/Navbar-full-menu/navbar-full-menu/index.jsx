@@ -24,7 +24,7 @@ const NavbarFullMenu = ({ theme, lr,nr,color }) => {
             <a>
               {theme ? (
                 theme === "light" ? (
-                  <h4>RedThreadLabs</h4>
+                  <h4 >RedThreadLabs</h4>
                 ) : (
                   <h4>RedThreadLabs</h4>
                 )

@@ -1,22 +1,22 @@
-import React, { useRef, useEffect, useState } from 'react';
-import NavbarFullMenu from '../Navbar-full-menu/navbar-full-menu';
+import React, { useRef, useEffect, useState } from "react";
+import NavbarFullMenu from "../Navbar-full-menu/navbar-full-menu";
 
 const VideoBackground = () => {
   const videoRef = useRef(null);
   const navbarRef = useRef(null);
-  const logoRef = useRef(null);
-  const [dimensions, setDimensions] = useState(null); // Delay usage until client-side
+  const [dimensions, setDimensions] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      setDimensions({ width, height });
+      setIsMobile(width < 768); // mobile breakpoint
     };
 
-    updateDimensions(); // Initial run
-    window.addEventListener('resize', updateDimensions);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
 
     if (videoRef.current) {
       videoRef.current.play().catch(console.error);
@@ -25,29 +25,29 @@ const VideoBackground = () => {
     const handleScroll = () => {
       if (navbarRef.current) {
         if (window.pageYOffset > 300) {
-          navbarRef.current.classList.add('nav-scroll');
+          navbarRef.current.classList.add("nav-scroll");
         } else {
-          navbarRef.current.classList.remove('nav-scroll');
+          navbarRef.current.classList.remove("nav-scroll");
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('resize', updateDimensions);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", updateDimensions);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  if (!dimensions) return null; // Skip render until client-side
+  if (!dimensions) return null;
 
   return (
     <div
       style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        overflow: 'hidden',
+        position: "relative",
+        width: "100%",
+        height: isMobile ? "200px" : "100vh",
+        overflow: "hidden",
       }}
     >
       <video
@@ -57,12 +57,14 @@ const VideoBackground = () => {
         muted
         playsInline
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: `${dimensions.width}px`,
-          height: `${dimensions.height}px`,
-          objectFit: 'cover',
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: isMobile ? "100%" : `${dimensions.width}px`,
+          height: isMobile ? "100%" : `${dimensions.height}px`,
+          objectFit: isMobile ? "cover" : "cover", // show whole video on mobile
+          backgroundColor: "black", // for letterboxing
           zIndex: 0,
         }}
       >
@@ -72,16 +74,16 @@ const VideoBackground = () => {
 
       <div
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
           left: 0,
-          width: '100%',
-          height: '100%',
-          color:'black',
+          width: "100%",
+          height: "100%",
+          color: "black",
           zIndex: 10,
         }}
       >
-        <NavbarFullMenu color={'dark'} nr={navbarRef}  />
+        <NavbarFullMenu color={"dark"} nr={navbarRef} />
       </div>
     </div>
   );

@@ -1,0 +1,93 @@
+[
+ 
+  {
+    "id": "1",
+    "title": "Positivus",
+    "showCase": "",
+     "category": "Development",
+    "client": "Positivus Agency",
+    "clientUrl": "",
+    "date": "2 May 2023",
+    "video": "",
+    "categories": [
+      { "name": "Agency", "url": "/works/works-dark" },
+      { "name": "Design", "url": "/works/works-dark" }
+    ],
+    "tags": ["Branding", "CMS", "Marketing"],
+    "image": "/portfolio_images/post-main.png",
+    "introduction": {
+      "title": "Problem Statement",
+      "description": "The Positivus agency wanted a fast, visually rich website to highlight their creative services and project outcomes. Their existing site lacked strategic messaging and failed to convert leads into clients effectively."
+    },
+    "images": [
+      { "src": "/portfolio_images/post-1.png", "size": "small" },
+      { "src": "/portfolio_images/post-2.png", "size": "small" },
+      { "src": "/portfolio_images/post-3.png", "size": "big" }
+    ],
+    "description": {
+      "title": "Solution",
+      "text": "We built a CMS-powered agency site highlighting impactful case studies, creative capabilities, and conversion-focused service pages. Result: increased client acquisition, brand visibility, and ROI-driven performance."
+    }
+  },
+   
+  
+  {
+    "id": "2",
+    "title": "Promotional Content",
+    "showCase": "/portfolio_images/download.jpg",
+    "category": "creatives",
+    "client": "Snus.be",
+    "clientUrl": "https://snus.be",
+    "date": "9 July 2024",
+        
+    "video": "1085281762/75269b468a",
+    "categories": [
+        { "name": "Enterprise", "url": "/works/works-dark" }
+    ],
+    "tags": ["Advertising Content"],
+    "image": "",
+    "introduction": {
+      "title": "Problem Statement",
+      "description": "Snus.be was struggling to differentiate itself in a saturated EU market dominated by cheap, commoditized nicotine pouch brands. Despite offering premium Scandinavian imports and faster shipping within Belgium, their brand presence lacked edge, authority, and emotional pull.Their website traffic was decent, but conversion rates were low, video ads had no story-driven edge, and returning customers didn’t emotionally bond with the brand.They needed a conversion-optimized promo video that wasn’t just “cool visuals” , but positioned them as the bold, rebellious alternative in a stale market"
+    },
+    "images": [
+      { "src": "/portfolio_images/np-1.png", "size": "small" },
+      { "src": "/portfolio_images/np-2.png", "size": "small" },
+      { "src": "/portfolio_images/np-main.png", "size": "big" }
+    ],
+    "description": {
+      "title": "Solution",
+      "text": "We built a cinematic, copy-driven video promo that centered on identity, not ingredients—transforming snus.be from a product seller into a badge of boldness for young, urban Belgians.The creative was rooted in premium lifestyle storytelling, paired with high-converting copywriting and native ad formats, built specifically for performance on Meta platforms.We focused on edge, exclusivity, and frictionless CTA placement—delivering a promo asset that not only boosted CTRs, but finally gave snus.be the emotional gravity of a high-ticket brand."
+    }
+  },
+   {
+    "id": "3",
+    "title": "EstateIn",
+    "showCase": "",
+    "category": "Development",
+    "client": "EstateIn Corp",
+    "clientUrl": "",
+    "date": "12 March 2023",
+    "video": "",
+    "categories": [
+      { "name": "Real Estate", "url": "/works/works-dark" },
+      { "name": "Web Platform", "url": "/works/works-dark" }
+    ],
+    "tags": ["Property", "Investors", "Automation"],
+    "image": "/portfolio_images/estatein-1.png",
+    "introduction": {
+      "title": "Problem Statement",
+      "description": "EstateIn’s founder needed a centralized system to manage leases, automate rent tracking, and generate investor reports across multiple properties. Their existing tools were disconnected and manual processes were causing delays in operations and communications."
+    },
+    "images": [
+      { "src": "/portfolio_images/estatein-1.png", "size": "small" },
+      { "src": "/portfolio_images/estatein-2.png", "size": "small" },
+      { "src": "/portfolio_images/estatein-3.png", "size": "big" }
+    ],
+    "description": {
+      "title": "Solution",
+      "text": "EstateIn streamlines property lifecycle management, from acquisition and lease administration to financial reporting and investor communications. The platform features automated rent tracking, maintenance workflows, investment dashboards, and tenant portals."
+    }
+  }
+
+  ]

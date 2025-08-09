@@ -14,6 +14,7 @@ import DarkTheme from "../layouts/Dark";
 import VideoBackground from "../components/video-background";
 import SimpleVideo from "../components/videoBg-simple"
 import CaseStudy from "../components/case-study/page";
+import VerticalShowcase from "../components/Vertical-Showcase";
 const Homepage1 = () => {
   const fixedSlider = useRef(null);
   const MainContent = useRef(null);
@@ -57,12 +58,12 @@ const Homepage1 = () => {
         {/* <AboutUs /> */}
         <Numbers />
         <CaseStudy/>
-        <Services />
+        <VerticalShowcase/>
         
         {/* <WorksSlider /> */}
         <VideoWithTestimonials />
         <SkillsCircle theme="dark" subBG />
-      
+         <Services />
         <CallToAction subBG />
         <Footer />
       </div>

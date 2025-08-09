@@ -7,7 +7,7 @@ const handleFullScreenNavbar = () => {
   }
   var open = false,
     navDark = document.querySelector(".topnav.dark"),
-    logoChan = document.querySelector(".topnav.dark .logo img"),
+    logoChan = document.querySelector(" .logo"),
     menuIcon = document.querySelector(".topnav .menu-icon"),
     menuText = document.querySelector(".topnav .menu-text");
 
@@ -20,6 +20,7 @@ const handleFullScreenNavbar = () => {
         document.querySelector(".topnav .menu-icon ").classList.add("open");
         menuText.innerHTML = "Close";
         menuText.classList.add("color-white");
+        logoChan.classList.add("color-white");
         if (navDark) {
           navDark.classList.add("navlit");
         }
@@ -32,6 +33,7 @@ const handleFullScreenNavbar = () => {
         document.querySelector(".topnav .menu-icon").classList.remove("open");
         menuText.innerHTML = "Menu";
         menuText.classList.remove("color-white");
+         logoChan.classList.remove("color-white");
 
         if (navDark) {
           navDark.classList.remove("navlit");

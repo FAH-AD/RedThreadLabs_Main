@@ -1,22 +1,18 @@
-import React, { useRef, useEffect, useState } from 'react';
-import Navbar from '../Navbar';
+import React, { useRef, useEffect, useState } from "react";
+import Navbar from "../Navbar";
 
-const VideoBackground = ({src}) => {
+const VideoBackground = ({ src }) => {
   const videoRef = useRef(null);
   const navbarRef = useRef(null);
-  const logoRef = useRef(null);
-  const [dimensions, setDimensions] = useState(null); // Delay usage until client-side
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+    const updateSize = () => {
+      setIsMobile(window.innerWidth < 768); // Mobile breakpoint
     };
 
-    updateDimensions(); // Initial run
-    window.addEventListener('resize', updateDimensions);
+    updateSize();
+    window.addEventListener("resize", updateSize);
 
     if (videoRef.current) {
       videoRef.current.play().catch(console.error);
@@ -25,29 +21,28 @@ const VideoBackground = ({src}) => {
     const handleScroll = () => {
       if (navbarRef.current) {
         if (window.pageYOffset > 300) {
-          navbarRef.current.classList.add('nav-scroll');
+          navbarRef.current.classList.add("nav-scroll");
         } else {
-          navbarRef.current.classList.remove('nav-scroll');
+          navbarRef.current.classList.remove("nav-scroll");
         }
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('resize', updateDimensions);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", updateSize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  if (!dimensions) return null; // Skip render until client-side
 
   return (
     <div
       style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        overflow: 'hidden',
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+        overflow: "hidden",
+        backgroundColor: "black", // prevents white background during letterboxing
       }}
     >
       <video
@@ -57,20 +52,19 @@ const VideoBackground = ({src}) => {
         muted
         playsInline
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: `${dimensions.width}px`,
-          height: `${dimensions.height}px`,
-          objectFit: 'cover',
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "100%",
+          height: "100%",
+          objectFit: isMobile ? "contain" : "cover", // contain for mobile, cover for desktop
           zIndex: 0,
         }}
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-    
     </div>
   );
 };
