@@ -5,7 +5,9 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <section className="services">
+    <section className="services " style={{
+      marginTop:'10rem'
+    }}>
       <div className="container">
         <div className="sec-head custom-font text-center">
           <h6 className="wow fadeIn" data-wow-delay=".5s">

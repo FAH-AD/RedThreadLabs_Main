@@ -40,7 +40,7 @@ const VideoBackground = ({ src }) => {
       style={{
         position: "relative",
         width: "100%",
-        height: "100vh",
+       height: isMobile ? "200px" : "100vh",
         overflow: "hidden",
         backgroundColor: "black", // prevents white background during letterboxing
       }}

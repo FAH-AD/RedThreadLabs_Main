@@ -35,12 +35,13 @@ const AboutDark = () => {
         <NavbarFullMenu color={'dark'} nr={navbarRef}  />
       <AboutHeader />
       <AboutIntro />
-      <Services withPadding withOutTitle />
-      <VideoWithTestimonials />
-      <SkillsCircle subBG theme="dark" />
-      <Team1 />
-      <MinimalArea />
       <Clients theme="dark" />
+      <VideoWithTestimonials />
+      <Services withPadding withOutTitle />
+     
+      {/* <Team1 /> */}
+      <MinimalArea />
+      
       <CallToAction subBG />
       <Footer />
     </DarkTheme>
